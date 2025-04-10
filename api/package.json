@@ -1,0 +1,9 @@
+{
+  "name": "pizzeria-api",
+  "version": "1.0.0",
+  "description": "Serverless API endpoints for Pizzeria Web",
+  "main": "index.js",
+  "dependencies": {
+    "nodemailer": "^6.9.9"
+  }
+}

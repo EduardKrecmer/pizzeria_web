@@ -1,0 +1,36 @@
+# Štandardné ignorované súbory
+node_modules/
+.DS_Store
+dist/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+coverage/
+build/
+*.tsbuildinfo
+
+# Replit špecifické
+.replit
+replit.nix
+.cache/
+.upm/
+.config/
+
+# Vercel špecifické
+.vercel/
+vercel-deployment/
+
+# Dočasné súbory
+*.swp
+*.swo
+*~

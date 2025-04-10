@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Olivovo zelená farba */
+    --primary: 84 38% 40%;
+    --primary-dark: 84 38% 32%;
+    --primary-light: 84 38% 48%;
+    
+    /* Doplnková farba - zemitá hnedá */
+    --secondary: 36 30% 30%;
+    --secondary-dark: 36 30% 24%;
+    --secondary-light: 36 30% 40%;
+    
+    /* Prírodná akcent farba */
+    --accent: 72 70% 60%;
+    --accent-dark: 72 70% 52%;
+    --accent-light: 72 70% 70%;
+    
+    /* Prírodný svetlý podklad */
+    --background: 60 30% 96%;
+    --foreground: 84 20% 20%;
+    
+    --card: 60 30% 98%;
+    --card-foreground: 84 20% 20%;
+    
+    --popover: 60 30% 98%;
+    --popover-foreground: 84 20% 20%;
+    
+    --muted: 84 15% 90%;
+    --muted-foreground: 84 10% 40%;
+    
+    --accent: 72 60% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 84 15% 85%;
+    --input: 84 10% 90%;
+    --ring: 84 38% 40%;
+    
+    --radius: 0.75rem;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    @apply bg-[#f8f7f2] text-neutral-800 antialiased;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C9' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    @apply text-[#4a5d23] font-bold;
+  }
+  
+  .font-accent {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  /* Pridané prvky pre prírodný vzhľad */
+  .nature-box {
+    @apply border border-[#a2b969] bg-[#f8f7f2] rounded-lg p-4 shadow-sm;
+  }
+  
+  .eco-badge {
+    @apply bg-[#a2b969] text-white text-xs px-2 py-1 rounded-full font-medium;
+  }
+
+  .text-shadow-lg {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@layer components {
+  .pizza-card {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .pizza-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ingredient-tag {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  .ingredient-tag:hover {
+    @apply bg-primary text-white;
+  }
+  
+  .loading-spinner {
+    @apply rounded-full w-6 h-6 border-3 border-white/30 border-t-white animate-spin;
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "functions": {
+    "api/*.js": {
+      "memory": 512,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    { "src": "/api/pizzas", "dest": "/api/pizzas-vercel.js" },
+    { "src": "/api/extras", "dest": "/api/extras-vercel.js" },
+    { "src": "/api/orders", "dest": "/api/orders-vercel.js" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*).js",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" }
+      ]
+    },
+    {
+      "source": "/(.*).mjs",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" }
+      ]
+    },
+    {
+      "source": "/(.*).css",
+      "headers": [
+        { "key": "Content-Type", "value": "text/css" }
+      ]
+    }
+  ],
+  "env": {
+    "EMAIL_HOST": "smtp.gmail.com",
+    "EMAIL_PORT": "465",
+    "EMAIL_SECURE": "true",
+    "EMAIL_USER": "pizza.objednavka@gmail.com",
+    "EMAIL_FROM": "Pizzeria Janíček <pizza.objednavka@gmail.com>",
+    "RESTAURANT_EMAIL": "vlastnawebstranka@gmail.com"
+  }
+}

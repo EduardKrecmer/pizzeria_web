@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzeria Janíček - Diagnostika</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    h1, h2, h3 {
+      color: #4a5d23;
+    }
+    .header {
+      background-color: #4a5d23;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      color: white;
+      margin: 0;
+    }
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .status-indicator {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    .status-ok {
+      background-color: #22c55e;
+    }
+    .status-warning {
+      background-color: #f59e0b;
+    }
+    .status-error {
+      background-color: #ef4444;
+    }
+    .status-unknown {
+      background-color: #9ca3af;
+    }
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .flex > div {
+      width: 48%;
+    }
+    button {
+      background-color: #4a5d23;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #5a6d33;
+    }
+    button:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+    pre {
+      background-color: #f1f5f9;
+      padding: 15px;
+      border-radius: 4px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .flex > div {
+        width: 100%;
+      }
+    }
+    .label {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    .label-success {
+      background-color: #dcfce7;
+      color: #166534;
+    }
+    .label-error {
+      background-color: #fee2e2;
+      color: #b91c1c;
+    }
+    .label-warning {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
+    input, select {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-right: 8px;
+      margin-bottom: 10px;
+    }
+    .refresh-icon {
+      margin-left: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .processing {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Pizzeria Janíček - Diagnostika Systému</h1>
+    <p>Monitorovanie a testovanie komponentov aplikácie</p>
+  </div>
+
+  <div class="card">
+    <h2>Stav služieb <span class="refresh-icon" onclick="refreshAllStatuses()">🔄</span></h2>
+    <div class="flex">
+      <div>
+        <div id="db-status">
+          <h3>Databáza</h3>
+          <p><span class="status-indicator status-unknown"></span> <span id="db-status-text">Zisťuje sa...</span></p>
+          <pre id="db-details" style="display: none;"></pre>
+        </div>
+
+        <div id="email-status">
+          <h3>Emailový systém</h3>
+          <p><span class="status-indicator status-unknown"></span> <span id="email-status-text">Zisťuje sa...</span></p>
+          <pre id="email-details" style="display: none;"></pre>
+        </div>
+      </div>
+      <div>
+        <div id="server-status">
+          <h3>Server</h3>
+          <p><span class="status-indicator status-ok"></span> <span id="server-status-text">Beží</span></p>
+          <p>Port: <strong>5000</strong></p>
+          <p>Čas kontroly: <span id="check-time"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Test emailov</h2>
+    <p>Odošle testovacie emaily na zadanú adresu a reštauráciu</p>
+    
+    <div>
+      <input type="email" id="test-email" placeholder="testovaci@email.com" />
+      <input type="text" id="test-customer" placeholder="Meno zákazníka" value="Testovací Zákazník" />
+      <button onclick="testEmails()">Odoslať testovacie emaily</button>
+    </div>
+    
+    <div id="email-test-result" style="margin-top: 15px; display: none;">
+      <h3>Výsledok testu:</h3>
+      <pre id="email-test-output"></pre>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Posledné objednávky</h2>
+    <button onclick="fetchLatestOrders()">Načítať najnovšie objednávky</button>
+    
+    <div id="orders-container" style="margin-top: 20px; display: none;">
+      <h3>Výsledok:</h3>
+      <pre id="orders-output"></pre>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 Pizzeria Janíček, Púchov | Diagnostický panel</p>
+  </div>
+
+  <script>
+    // Pomocné funkcie
+    function formatDate(dateString) {
+      const date = new Date(dateString);
+      return date.toLocaleString('sk-SK');
+    }
+
+    function setStatusIndicator(elementId, status, text, details = null) {
+      const statusElement = document.getElementById(elementId);
+      const statusText = document.getElementById(`${elementId}-text`);
+      const statusDetails = document.getElementById(`${elementId}-details`);
+      
+      statusElement.querySelector('.status-indicator').className = `status-indicator status-${status}`;
+      statusText.textContent = text;
+      
+      if (details) {
+        statusDetails.textContent = JSON.stringify(details, null, 2);
+        statusDetails.style.display = 'block';
+      }
+    }
+
+    // Kontrola stavu databázy
+    async function checkDatabaseStatus() {
+      try {
+        const response = await fetch('/api/db-status');
+        const data = await response.json();
+        
+        if (data.connected) {
+          setStatusIndicator('db-status', 'ok', 'Pripojená', data);
+        } else {
+          setStatusIndicator('db-status', 'error', 'Nepripojená', data);
+        }
+      } catch (error) {
+        setStatusIndicator('db-status', 'error', 'Chyba pri kontrole', { error: error.message });
+      }
+    }
+
+    // Kontrola stavu emailového systému
+    async function checkEmailStatus() {
+      try {
+        const response = await fetch('/api/email-config-status');
+        const data = await response.json();
+        
+        if (data.configured) {
+          setStatusIndicator('email-status', 'ok', `Nakonfigurovaný (${data.host})`, data);
+        } else {
+          setStatusIndicator('email-status', 'warning', 'Nenakonfigurovaný', data);
+        }
+      } catch (error) {
+        setStatusIndicator('email-status', 'error', 'Chyba pri kontrole', { error: error.message });
+      }
+    }
+
+    // Test odosielania emailov
+    async function testEmails() {
+      const emailInput = document.getElementById('test-email');
+      const customerInput = document.getElementById('test-customer');
+      const resultContainer = document.getElementById('email-test-result');
+      const resultOutput = document.getElementById('email-test-output');
+      
+      const email = emailInput.value || 'krecmer.eduard@gmail.com';
+      const customer = customerInput.value || 'Testovací Zákazník';
+      
+      resultContainer.style.display = 'block';
+      resultOutput.textContent = 'Odosielam testovacie emaily...';
+      
+      try {
+        const response = await fetch(`/api/test-email-direct?email=${encodeURIComponent(email)}&customer=${encodeURIComponent(customer)}`);
+        const data = await response.json();
+        resultOutput.textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        resultOutput.textContent = `Chyba pri teste emailov: ${error.message}`;
+      }
+    }
+
+    // Načítanie najnovších objednávok
+    async function fetchLatestOrders() {
+      const ordersContainer = document.getElementById('orders-container');
+      const ordersOutput = document.getElementById('orders-output');
+      
+      ordersContainer.style.display = 'block';
+      ordersOutput.textContent = 'Načítavam objednávky...';
+      
+      try {
+        const response = await fetch('/api/orders');
+        const orders = await response.json();
+        
+        if (orders && orders.length > 0) {
+          const latestOrders = orders.slice(-5).reverse(); // Posledných 5 objednávok
+          
+          const formattedOrders = latestOrders.map(order => {
+            return {
+              id: order.id,
+              zákazník: order.customerName,
+              telefón: order.customerPhone,
+              email: order.customerEmail || 'neuvedený',
+              spôsob: order.deliveryType === 'DELIVERY' ? 'DORUČENIE' : 'OSOBNÝ ODBER',
+              adresa: `${order.deliveryAddress}, ${order.deliveryCity}`,
+              suma: `${order.totalAmount.toFixed(2)}€`,
+              dátum: formatDate(order.createdAt),
+              položky: order.items.length
+            };
+          });
+          
+          ordersOutput.textContent = JSON.stringify(formattedOrders, null, 2);
+        } else {
+          ordersOutput.textContent = 'Žiadne objednávky neboli nájdené.';
+        }
+      } catch (error) {
+        ordersOutput.textContent = `Chyba pri načítavaní objednávok: ${error.message}`;
+      }
+    }
+
+    // Obnovenie všetkých stavov
+    function refreshAllStatuses() {
+      document.getElementById('check-time').textContent = new Date().toLocaleString('sk-SK');
+      checkDatabaseStatus();
+      checkEmailStatus();
+    }
+
+    // Inicializácia stránky
+    window.onload = function() {
+      refreshAllStatuses();
+    };
+  </script>
+</body>
+</html>
