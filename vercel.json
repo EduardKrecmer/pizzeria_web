@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run vercel-build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "functions": {
@@ -10,9 +10,9 @@
     }
   },
   "routes": [
-    { "src": "/api/pizzas", "dest": "/api/pizzas-vercel.js" },
-    { "src": "/api/extras", "dest": "/api/extras-vercel.js" },
-    { "src": "/api/orders", "dest": "/api/orders-vercel.js" },
+    { "src": "/api/pizzas", "dest": "/api/pizzas.js" },
+    { "src": "/api/extras", "dest": "/api/extras.js" },
+    { "src": "/api/orders", "dest": "/api/orders.js" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
@@ -45,3 +45,4 @@
     "RESTAURANT_EMAIL": "vlastnawebstranka@gmail.com"
   }
 }
+
