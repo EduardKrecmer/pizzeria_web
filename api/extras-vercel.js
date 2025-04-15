@@ -2,7 +2,12 @@
 // Tento súbor bude nasadený ako serverless funkcia na Vercel
 
 // Načítame dáta z lokálneho JSON súboru
-const extrasData = require('../extras.json');
+const extras = require('../client/data/extras.json');
+
+module.exports = (req, res) => {
+  res.status(200).json(extras);
+};
+
 
 module.exports = (req, res) => {
   // Nastavenia CORS pre povolenenie prístupu z rôznych domén

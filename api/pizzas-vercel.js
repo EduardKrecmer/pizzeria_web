@@ -2,7 +2,12 @@
 // Tento súbor bude nasadený ako serverless funkcia na Vercel
 
 // Načítame dáta z lokálneho JSON súboru
-const pizzasData = require('../pizzas.json');
+const pizzas = require('../client/data/pizzas.json');
+
+module.exports = (req, res) => {
+  res.status(200).json(pizzas);
+};
+
 
 module.exports = (req, res) => {
   // Nastavenia CORS pre povolenenie prístupu z rôznych domén
