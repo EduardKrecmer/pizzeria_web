@@ -9,7 +9,7 @@
     }
   ],
   "functions": {
-    "client/api/*.js": {
+    "api/*.js": {
       "memory": 512,
       "maxDuration": 10
     }
