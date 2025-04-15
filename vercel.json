@@ -9,13 +9,6 @@
       "maxDuration": 10
     }
   },
-  "routes": [
-    { "src": "/api/pizzas", "dest": "/api/pizzas.js" },
-    { "src": "/api/extras", "dest": "/api/extras.js" },
-    { "src": "/api/orders", "dest": "/api/orders.js" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ],
   "headers": [
     {
       "source": "/(.*).js",
@@ -36,6 +29,9 @@
       ]
     }
   ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "env": {
     "EMAIL_HOST": "smtp.gmail.com",
     "EMAIL_PORT": "465",
@@ -45,4 +41,3 @@
     "RESTAURANT_EMAIL": "vlastnawebstranka@gmail.com"
   }
 }
-
