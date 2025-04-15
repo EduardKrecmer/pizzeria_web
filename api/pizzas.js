@@ -1,5 +1,5 @@
-const pizzas = require('../client/data/pizzas.json');
+const pizzas = require('../shared/data/pizzas.json');
 
 module.exports = (req, res) => {
-    res.status(200).json(pizzas);
+  res.status(200).json(pizzas);
 };

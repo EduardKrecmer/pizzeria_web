@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita",
+    "ingredients": ["paradajkový základ", "mozzarella", "bazalka"],
+    "price": 7.5
+  },
+  {
+    "id": 2,
+    "name": "Šunková",
+    "ingredients": ["paradajkový základ", "mozzarella", "šunka"],
+    "price": 8.0
+  }
+]
