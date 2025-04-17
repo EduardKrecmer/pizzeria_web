@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "vercel-build": "vite build",
-    "start": "vite preview",
-    "check": "tsc"
-  },
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "vercel-build": "vite build --config vite.config.vercel.ts",
+  "start": "vite preview",
+  "check": "tsc"
+},
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "^1.2.1",
