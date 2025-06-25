@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Syrová",
     "description": "Paradajková drť, Bazalka, Mozzarella",
-    "price": 6.5,
+    "price": 5.1,
     "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Vegetariánske",
@@ -58,7 +58,7 @@
     "id": 4,
     "name": "Štyri ročné obdobia",
     "description": "Paradajková drť, Bazalka, Mozzar., Sunka sampifény, Arti¢oky, Olivy",
-    "price": 7.3,
+    "price": 7.2,
     "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Klasické"
@@ -78,7 +78,7 @@
     "id": 5,
     "name": "Vajíčková",
     "description": "Paradajková drť, Bazalka, Mozzarella, Sunka, Sampifiény, Vaji¢ko",
-    "price": 6.9,
+    "price": 7.2,
     "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Klasické"
@@ -137,7 +137,7 @@
     "id": 8,
     "name": "Klasická",
     "description": "Paradajková drť, Bazalka, Mozzar., Sunka, Sampitiény, Kukurica",
-    "price": 7.1,
+    "price": 7.2,
     "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Klasické"
@@ -157,7 +157,7 @@
     "id": 9,
     "name": "Šampiňónová",
     "description": "Paradajková drť, Bazalka, Mozzarella, 7/..  (par.drt, Mozzar., Gorgonzola, Niva, Deny syr, Spargla",
-    "price": 6.5,
+    "price": 6.0,
     "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Vegetariánske",
@@ -167,12 +167,7 @@
       "Paradajková drť",
       "Bazalka",
       "Mozzarella",
-      "7/..  (par.drt",
-      "Mozzar.",
-      "Gorgonzola",
-      "Niva",
-      "Deny syr",
-      "Spargla"
+      "Šampiňóny",
     ],
     "weight": "500g",
     "allergens": "1,7"
@@ -217,7 +212,7 @@
     "id": 12,
     "name": "Slaninová",
     "description": "Paradajková drť, Bazalka, Mozzarella, Slanina, Cibuta",
-    "price": 6.9,
+    "price": 6.8,
     "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Klasické"
@@ -236,7 +231,7 @@
     "id": 13,
     "name": "Salámová",
     "description": "Paradajková drť, Bazalka, Mozzarella, Saléma, Olivy, Cibula",
-    "price": 7.1,
+    "price": 7.2,
     "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Klasické"
@@ -276,7 +271,7 @@
     "id": 15,
     "name": "Tiroľská",
     "description": "Paradajková drť, Bazalka; mozzarella, Tirolska stanina, Cibufa, Olivy",
-    "price": 7.2,
+    "price": 7.5,
     "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Klasické"
@@ -352,8 +347,8 @@
   {
     "id": 19,
     "name": "Brusnicová",
-    "description": "Paradajková drť, Bazalka, Mozzarella, Sunka, 4, Tunlak, Olivy, Cibula",
-    "price": 7.1,
+    "description": "Paradajková drť, Bazalka, Mozzarella, Šunka, Brusnice, Encián",
+    "price": 7.5,
     "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Obľúbené"
@@ -363,10 +358,8 @@
       "Bazalka",
       "Mozzarella",
       "Sunka",
-      "4",
-      "Tunlak",
-      "Olivy",
-      "Cibula"
+      "Brusnice",
+      "Encián",
     ],
     "weight": "550g",
     "allergens": "1,7,"
@@ -375,7 +368,7 @@
     "id": 20,
     "name": "Tuniaková",
     "description": "Paradajková drť, Bazalka, Mozzarella, Tuniak, Olivy, Cibuľa",
-    "price": 7.5,
+    "price": 7.0,
     "image": "https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Ryby",
@@ -396,7 +389,7 @@
     "id": 21,
     "name": "Lososová",
     "description": "Paradajková drť, Bazalka, Mozzarella, Lasos, Olivy",
-    "price": 7.8,
+    "price": 8.4,
     "image": "https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Ryby",
@@ -416,7 +409,7 @@
     "id": 22,
     "name": "Brokolicová",
     "description": "Paradajková drť",
-    "price": 6.9,
+    "price": 7.0,
     "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Vegetariánske"
@@ -431,7 +424,7 @@
     "id": 23,
     "name": "Paradajková",
     "description": "Paradajková drť, Bazaka, Mozzarella, Parmezdn",
-    "price": 6.3,
+    "price": 6.5,
     "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Vegetariánske"
@@ -449,7 +442,7 @@
     "id": 24,
     "name": "Posúch",
     "description": "Olivovy ole}, Mozzarella, Cesnak",
-    "price": 5.9,
+    "price": 5.1,
     "image": "https://images.unsplash.com/photo-1541745537411-b8046dc6d1c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Špeciality"
@@ -483,8 +476,8 @@
   {
     "id": 26,
     "name": "Špenátová",
-    "description": "Paradajková drť, Bazalka, Mozzarella, Spendt, Piniové oriesky",
-    "price": 7,
+    "description": "Paradajková drť, Bazalka, Mozzarella, Špenát, Piniové oriešky",
+    "price": 6.5,
     "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Vegetariánske",
@@ -494,8 +487,8 @@
       "Paradajková drť",
       "Bazalka",
       "Mozzarella",
-      "Spendt",
-      "Piniové oriesky"
+      "Špenát",
+      "Piniové oriešky"
     ],
     "weight": "450g",
     "allergens": "1,7,8"
@@ -503,8 +496,8 @@
   {
     "id": 27,
     "name": "Janíčkova",
-    "description": "Paradajková drť, Bazalka, Mozzar., Sus. hov. svieckova, Parmezan, Rukola",
-    "price": 8,
+    "description": "Paradajková drť, Bazalka, Mozzarela, Suš. hov. sviečková, Parmezan, Rukola",
+    "price": 8.4,
     "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Prémiové",
@@ -514,8 +507,8 @@
       "Paradajková drť",
       "Bazalka",
       "Mozzar.",
-      "Sus. hov. svieckova",
-      "Parmezan",
+      "Suš. hov. sviečková",
+      "Parmezán",
       "Rukola"
     ],
     "weight": "480g",
@@ -545,7 +538,7 @@
     "id": 29,
     "name": "Talianska",
     "description": "Paradajková drť, Bazalka, Mozzarella, Pancetta, Kapary",
-    "price": 7.6,
+    "price": 7.5,
     "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Prémiové",
@@ -565,7 +558,7 @@
     "id": 30,
     "name": "Fitness",
     "description": "Ricotta, Kuracie prsia, Paradajková drť, Rukola",
-    "price": 7.4,
+    "price": 7.5,
     "image": "https://images.unsplash.com/photo-1665507328904-307fd8756146?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
     "tags": [
       "Fitness",
@@ -579,5 +572,29 @@
     ],
     "weight": "480g",
     "allergens": "1,7"
-  }
+  },
+  {
+      "id": 31,
+      "name": "Mexická",
+      "description": "Paradajková drť, Bazalka, Mozzarella, Klobása, Fazuľa, Baranie rohy, Cibuľa, Rukola",
+      "price": 8.4,
+      "weight": "540g",
+      "tags": [
+      "Špeciality"
+    ],
+      "ingredients": ["Paradajková drť","Bazalka","Mozzarella","Klobása","Fazuľa","Baranie rohy","Cibuľa","Rukola"],
+      "allergens": ["1","7"]
+    },
+  {
+      "id": 32,
+      "name": "Bryndzová",
+      "description": "Smotanový základ", Bryndza, Slanina",
+      "price": 8.0,
+      "weight": "500g",
+      "tags": [
+      "Špeciality"
+    ],
+      "ingredients": ["Smotanový základ", "Bryndza","Slanina"],
+      "allergens": ["1","7"]
+    },
 ]
